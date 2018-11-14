@@ -1,0 +1,470 @@
+
+Curso Mongo, Express, Node e Angular - Udemy (01/08/2018)
+
+Aula 1 a 3 - Introdução do curso e visão geral.
+
+Aula 4 - Material de apoio e repositório.
+
+Aula 5 - Conhecendo o Projeto que vai ser desenvolvido no curso:
+
+	- O sistema é um gerenciamento de finanças pessoais.
+
+Aula 6 - Repositório no github:
+
+	- https://github.com/CursosCod3r/mean-primeira-app
+
+Aula 7 - Instalação do MongoDB (banco de dados NoSQL):
+
+	- $>sudo apt update.
+	- $>sudo apt install -y mongodb.
+	- $>sudo systemctl status mongodb (verifica se o serviço do mongodb foi instalado).
+	- $>mongo --eval 'db.runCommand({ connectionStatus: 1 })' (exibe a versão do mongodb e endereço do servidor).
+	- pasta do mongodb /usr/bin/mongod.
+	- MongoDB server version: 3.6.3
+	- Site auxiliou instalação do mongodb:
+	 	* https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-18-04
+
+Aula 8 - Instalação do NodeJS:
+
+	- Para instalação do NodeJs(Debian 9):
+		* sudo apt install curl
+		* sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+		* sudo apt-get install -y nodejs (já instala npm).
+	- NodeJs versão v10.10.0 e npm versão 6.4.1
+
+
+Aula 9 - MongoDb:
+
+	- NoSQL não apenas SQL:
+
+		* Redis (chave x valor).
+		* MongoDb (orientados a documentos - JSON).
+		* Grafos.
+		* Cassandra (orientados a colunas).
+
+	- MongoDb não tem esquema, não tem a camada de restrições.
+	- Escalonamento Vertical x Horizontal:
+		* Vertical aumenta memória, processador, disco etc..
+		* Horinzontal aumenta o número de servidores.
+	- Aplicações hibrídas relacional e não relacionais.
+	
+Aula 10 - Comandos básicos do MongoDb:
+
+	- Iniciar o console do mongodb $>mongo		
+	
+[----------------------------------------------------------------------------------------------- (02/08/2018)]
+
+Aula 11 - MongoDb inserções:
+
+	- Os comandos insert e save salvam dados no banco, o save serve também para atualizar.
+	- No MongoDb as tabelas são chamadas de collections.
+
+Aula 12 - MongoDb consultas:
+
+	- Comando para consultar todos os registros find().
+	- Comando para consultar exibindo os registros estruturados find().pretty().
+
+Aula 13 - MongoDb agregação:
+
+	- Comando para agregar(agrupar) os campos para somar.	
+
+Aula 14 - MongoDb atualização:
+
+Aula 15 - MongoDb contador e remoção:
+
+	- Comando count() e remove().
+	- Comando dropDatabase() excluir o banco que está sendo usado.
+
+[----------------------------------------------------------------------------------------------- (06/08/2018)]
+
+Aula 16 - Exercicios 01 JavaScript Básico:
+	
+	- Criar uma pasta $>node.
+	- Instalar o atom, para executar $>atom .	 
+	- O Node Js um servidor baseado em JavaScript.
+	- Para executar um arquivo JavaScript pelo node $>node (nome do arquivo).
+	- No Atom as teclas "Crtl+," abre as configurações.
+	- O node permite executar o javascript do lado do servidor.
+	- Para acesso as páginas Html com manipulação do DOM (interface com usuário), utiliza-se outras ferramentas.
+
+Aula 17 - Exercício 02 - Sistemas de Módulos:
+	- Eu posso chamar funções definidas em arquivos externos, desde que estas funções estejam disponíveis através
+	de "module.exports(nome da função)".
+
+Aula 18 - Exercício 03 - Singleton:
+
+	- Um objeto com uma única instância (Singleton)	.
+	
+[----------------------------------------------------------------------------------------------- (13/08/2018)]
+
+Aula 19 - Exercício 04 - Objeto Global:
+
+	- Ao utilizar objetos globais tanto do lado do cliente como do lado do servidor, tem que tomar cuidado para não
+	causar erros no seu Sistema.
+	- Uma constante não é criada automaticamente no contexto global.
+	- Para executar um arquivo no NodeJs dentro do Atom "Alt+r".
+
+Aula 20 - Exercício 05 - This:
+
+	- This a ponta para objeto module.exports.
+	- No JavaScript você tem um objeto vazio e pode compor este objeto de forma dinâmica na aplicação.	
+
+Aula 21 - Exercício 06 - Módulo Externo (Lodash):
+
+	- O lodash não pertence ao core do NodeJs.
+	- É necessário instalar via console : $>npm install lodash.
+	- Gerenciador de modulos externos do NodeJs, $>npm.
+	- O comando $>npm init (cria um arquivo de configuração do aplicativo com nome 'package-lock.json').
+	- No caso de usar o git para versionamento do aplicativo, criar um arquivo '.gitignore', onde voê define
+	que a pasta de dependência 'node_modules' seja commitada para o git, ou outros arquivos.
+
+Aula 22 - Exercício 07 - Passagêm de Parâmetros:
+
+	- Referência para uma função externa passando parâmetros para esta.	
+
+Aula 23 - Exercício 08 - Process(ARGV):
+
+	- Com Process você consegue identificar os parâmetro que foram passados para seu aplicativo, os valores
+	destes. Estabelecendo comportamento apartir destes parâmetros.
+
+Aula 24 - Exercício 09 - Process(stdou/stdin):
+
+	- Utilizando o Process com a saída e entrada padrão.
+
+Aula 25 - Exercício 10 - Módulo FS (file system):
+
+	- Módulo para trabalhar com arquivos externos.
+
+Aula 26 - Exercício 11 - Módulo Http:
+
+	- O NodeJs como provedor Http.
+			
+[----------------------------------------------------------------------------------------------- (17/08/2018)]
+
+Aula 27 - Express Visão Geral:
+
+	- Express Framework web que roda com NodeJs.
+
+	- O Express foi desenvolvido adotando um padrão Chain of Responsability.
+
+	- Uma cadeia de responsabilidade. No expresse o mildware é uma função que tem os parâmetro (request, response, next).
+
+
+
+[----------------------------------------------------------------------------------------------- (20/08/2018)]		
+
+Aula 28 - Configurando e Mapeando uma Rota:
+
+	- Criar um outro projeto "express", iniciar o projeto com $>npm init (para criação do package.json).
+	- Instalar o Express $>npm i --save express.
+	- Para executar no Atom (Alt+r), para chamar o browse (Crtl+shif+p).
+	- Utilizar o PostMan para testar.
+
+Aula 29 - Cadeia de Middlewares:
+
+	- No JavaScript se uma função tem vários parâmetros, você pode suprimir os últimos quando chamar a função.
+	- No exemplo eu tenho uma cadeia de middleware.
+	- A chamada "next()" chama o próximo middleware, cadeia de responsabilidade.
+
+Aula 30 - Método Use:
+
+	- Outra forma de mapear cadeia de middleware.
+	- Quando utiliza-se "get" a url passada tem que ser idêntica.
+	- Quando utiliza-se "use" a url basta ter no inicio o valor do "use" que é válido.
+	- O "use" e "get" mapeiam dos os métodos do Http (get,post,put...).
+
+[----------------------------------------------------------------------------------------------- (27/08/2018)]
+
+Aula 31 - Método route:
+
+	- Você define apenas uma url e somente modifica os métodos (get,post,put,delete...).
+
+Aula 32 - Express Router:
+
+	- O Router é como se fosse um agrupamento de várias urls, uma miniaplicação.
+	- Você pode enviar resposta com send um conteúdo html (res.send('<h1>Oi</h1>')). Também pode enviar resposta com send
+	um conteúdo json.
+
+Aula 33 - Express e Router são Singletons?
+
+	- O Router e Express não são Singletons, quando é referênciado cria-se uma instância.	
+
+Aula 34 - Instalando Angular via npm:
+
+	- $>npm init (criar o pacote json e node_modules).
+	- $>npm i angular --save (instalar o angular).
+
+Aula 35 - Configurando uma página com Angular:
+
+	- Chamar o angular dentro da tag (<script>), definir qual a tag o angular vai funcionar.
+	- Utilizar a diretiva (ng-app) identificando o nome da aplicacação.
+
+Aula 36 - Binding:
+
+	- Ligação entre variáveis no angular.
+	- O Angular fica monitorando a variável.
+
+|--------------------------------------------------------------------------->[12/09/2018]
+
+Aula 37 - Controller:
+
+	- O Angular trabalha com injeção de dependência.
+
+	- O exemplo que vamos usar vai injetar um escopo.
+
+	- No Angular o escopo funciona como um intermediário entre a View e o Controller.
+
+Aula 38 - Controller As:
+
+	- Você criar um alias (apelido) para o Controller.
+
+Aula 39 - Filter:
+
+	- Recebe uma função e modifica o valor recebido.
+
+	- Segue um padrão pipper and filter.		
+
+|--------------------------------------------------------------------------->[13/09/2018]
+
+Aula 40 - Factory:
+
+	- Criar um objeto com funções pré-definidas (métodos).
+
+Aula 41 - Servie:
+
+	- O padrão Factory devolve uma função um Singleton, única instância.
+
+Aula 42 - Diretiva:
+
+	- A diretiva pode ser um elemento ou atributo.
+
+	- Ao definir a diretiva "meuRelogio" quando vou utilizar como elemento ou atributo fica "meu-relogio".
+
+Aula 43 - Componente:
+
+	- No componente os atributos de entrada são os bindings.
+
+	- Os bindings podem ser unidirecional ou bi-direcional.	Unidirecional "<" e Bi-direcional "=".
+
+Aula 44 - Versão inical do projeto Backend:
+
+	- Criar uma pasta $>CursoFramesWeb\backend.
+
+	- Nesta pasta executar o comando "npm init".
+
+	- Instalar as dependências: express, body-parser, mongoose, node-restful, mongoose-paginate, lodash, 
+	express-query-init, pm2.
+	
+	- Comando $>npm install 'dependências' --save (quando a opção --save significa que as dependências vão para
+	a produção).
+
+	- As dependências vão ser gravadas no arquivo package.json .
+
+	- Instalar a dependência para o desenvolvimento $>npm install nodemon --save-dev
+
+Aula 45 - Adicionando o .gitignore:
+
+	- Você define quais os pastas ou arquivos que não vão ser versionados pelo git.
+
+|--------------------------------------------------------------------------->[14/09/2018]
+
+Aula 46 - Implementando o Servidor com Express:
+
+	- Criar a porta para o servidor 3003.
+
+	- Usar o body-parser que serve para interpretar o body de uma requisição. Um medeware faz um parser do body da requisição.
+
+	- Usar o framework Express, que vai ser nossso framework Web no NodeJs.
+
+	- Utilizar dois middleware urlencoded e json.
+
+	- Na pasta do projeto executar o comando $>npm run dev (executar o servidor no perfil dev, que chama o nodemon).
+
+	- npm (node package manager).
+
+Aula 47 - Criando a conexão com MongoDB:
+
+	- Criando a configuração com conexão com banco dados.
+
+	- Mongoose faz a conexão com o MongoDB. Também faz o mapeamento entre os obejtos e os documentos armazenados no MongoDB.
+
+	- Para iniciar o MongoDB executar o comando $>mongod .
+
+Aula 48 - Mapeamento ODM do Objeto Ciclo de Pagamento:
+
+	- Utilizar API do Mongoose para fazer o mapeamento.
+
+	- Mapear os dados do ciclo de pagamento.
+
+	- A API node-restful expõem um recurso disponível no NodeJs, em uma arquitetura RestFul.
+
+	- Cada arquivo do node é um module.
+
+	- O mapeamento do objeto define como vai ser armazenado no MongoDb.
+
+Aula 49 - Serviço de Ciclo de Pagamentos:
+
+	- Definir os serviços que vão ser expostos via API RestFul.	
+
+|--------------------------------------------------------------------------->[19/09/2018]
+
+Aula 50 - Criando o Arquivo de Rotas:
+
+	- Criar rotas(url) para cada um dos serviços disponíveis.
+
+	- Para passar um parâmetro para outro modulo através de "module.exports".
+
+Aula 51 - Registrando as rotas do serviço de ciclo de pagamentos	
+
+Aula 52 - Testando a API de Ciclo de Pagamentos (parte 1):
+
+	* Utilizar o Postman para fazer os teste da API. Com um POST na opção "x-www-form-urlencoded" digitar os dados:
+
+			name:Abril/17
+			month:2
+			year:2019
+			credits[0][name]:Salario Empresa
+			credits[0][value]:6500
+			credits[1][name]:Salario Professor
+			credits[1][value]:2700
+			debts[0][name]:Telefone
+			debts[0][value]:98.6
+			debts[0][status]:PAGO
+			debts[1][name]:Condominio
+			debts[1][value]:500
+			debts[1][status]:AGENDADO
+
+	* Na definição do esquema do mongoose, pode ser definido que um campo é obrigatório e uma mensagem associada ao mesmo.
+
+Aula 53 - Testando a API de Ciclo de Pagamentos (parte 2):
+
+	* Quando fazemos uma alteração com PUT, na primeira consulta ele retorna objeto antigo não vai mostrar o dado alterado. 
+	É necessário fazer uma alteração no código billingCycleService.js . 
+
+	* As mensagens de validação podem ser utilizadas de forma global ou específica para cada campo.
+
+Aula 54 - Testando a API de Ciclo de Pagamentos (parte 3): 
+
+	* Utilizando o método "DELETE".
+
+Aula 55 - Serviço Contador (count) de Ciclo de Pagamentos:
+
+	 	
+|--------------------------------------------------------------------------->[25/09/2018]
+
+Aula 56 - Serviços de Sumário de Pagamentos:
+
+	* Usar uma função do mongoose de agregação (operadores de agregação pipeline) . 
+
+	* Utilizar "$group" para definir grupos de agregação.
+
+	* Exportar a função de sumário.
+
+Aula 57 - Resgistrando a Rota do Serviço de Sumário de Pagamentos:
+
+	* O código do exemplo estava dando erro na "function getSummary()"tive que alterar o código devido a nova versão do 
+	mongoose, o método aggregate é um array []:
+
+		function getSummary(req, res){
+		  BillingCycle.aggregate([{
+		    $project:{credit:{$sum:"$credits.value"}, debt:{$sum:"$debts.value"}}
+		  },{
+		    $group:{_id:null, credit:{$sum: "$credit"}, debt:{$sum:"$debt"}}
+		  },{
+		    $project:{_id:0, credit:1, debt:1}
+		  }], function(error, result){
+		    if(error){
+		      res.status(500).json({errors:[error]});
+		    }else{
+		      res.json(_.defaults(result[0], {credit: 0, debt:0}))
+		    }
+		  })
+		}
+
+|--------------------------------------------------------------------------->[05/11/2018]
+
+Aula 58 - Uniformizando as Mensagens de Erro:
+
+	* O Node Rest Ful tem uma habilidade de interceptar requisições get, post, put e delete, antes ou depois do método ser executado.
+
+	* Tratar de forma padrão na mensagem de erro.
+
+Aula 59 - Visão Geral do Build:
+
+	* Atualização das versões das bibliotecas.
+
+	* Corrigir um bug no build do projeto.
+
+Aula 60 - Versão Inicial do Projeto Frontend:
+
+	* Dentro do projeto criar uma pasta onde vai ser desenvolvido o Frontend, $>mkdir angular1.
+
+	* Dentro da pasta criada executar o comando $>npm init -y.
+
+	* Quando fui instalar as dependências, apresentou erro tive que consultar "Perguntas e Resposta", onde refiz o arquivo package.json
+	alterando  a dependência "angular-ui-router" para "@uirouter/angularjs". A partir destas mundanças executei novamente $>npm i.
+
+Aula 61 - Adicionando o .gitignore ao Projeto:
+
+	* Quando for usar o git para versionamento do projeto, faz-se necessário criar um arquivo ".gitignore", onde serão apontados
+	os arquivos e pastas que não devem ser versionadas pelo git. Por exemplo pasta de bibliotecas de dependências que podem ser
+	baixadas pela internet.
+
+	* Sugestão para arquivos e pastas que devem ser ignoradas pelo git:
+		
+		# node_modules(pasta de dependências)
+		
+		# public (pasta criada pelo build)
+
+		# *.log (arquivos de log criado pelo Node Restful)
+
+|--------------------------------------------------------------------------->[13/11/2018]
+
+Aula 62 - Estrutura inicial do Build:
+
+	* Criar a estrutura básica o esqueleto do build do sistema, utilizando o Gulp que automatiza este processo.
+
+	* Criar uma pasta chamada "gulpTask"(tarefas) e dentro criar 3 arquivos:
+
+		- "app.js": todos os códigos de javascript, html e css construido com Angular.
+
+		- "deps.js": as dependências do sistema bibliotecas, fontes, imagens os recursos que aplicação precisa.
+
+		- "server.js": responsável em inicializar o servidor e webservices.
+
+	* Chamar as tarefas em paralelo.	
+
+	* O gulp executa uma sequência de tarefas, para ambiente desenvolvedor $>npm run dev em ambiente de produção $>npm run production.
+
+Aula 63 - Build dos arquivos das dependências:
+
+	* Processa vários arquivos que mimifica, compacta e gera no final um arquivo com as dependências, css e fontes.	
+
+	* Consultar as dependências no git https://github.com/CursosCod3r/mean-primeira-app/blob/master/angular1/gulpTasks/deps.js
+
+Aula 64 - Build dos arquivos do Projeto:
+
+	* Consultar as dependências no git https://github.com/CursosCod3r/mean-primeira-app/blob/master/angular1/gulpTasks/
+
+Aula 65 - Configurando o Servidor com Reload Automático:
+
+	* Consultar as dependências no git https://github.com/CursosCod3r/mean-primeira-app/blob/master/angular1/gulpTasks/
+
+Aula 66 - Implementando a Página Index:
+
+	* Definindo a estrutura do Aplicativo com 4 áreas: Cabeçalho, Menu, Conteúdo e Rodapé.
+
+Aula 67 - Adicionando o Angular ao Projeto:
+
+	* SPA - Single Page Aplication uma única págia é carregada, a partir deste momento o conteúdo é atualizado.	 	 	
+
+	* Na execução da aplicação apresentou um erro que foi enviado ao Professor.
+
+
+
+
+
+
+
+
+
