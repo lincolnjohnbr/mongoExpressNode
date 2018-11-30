@@ -12,7 +12,7 @@ gulp.task('app.html', () => {
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('public'))
 })
-
+ 
 gulp.task('app.css', () => {
   return gulp.src('app/**/*.css')
     .pipe(uglifycss({ "uglyComments": true }))
