@@ -470,6 +470,39 @@ Aula 67 - Adicionando o Angular ao Projeto:
 	* Depois de adicionar as dependências e os arquivos do gulp e a sequência de tarefas tudo funcionou.
 
 
+|--------------------------------------------------------------------------->[03/12/2018]
+
+Aula 68 - Implementação do Header:
+
+Aula 69 - Implementação do Footer:
+
+Aula 70 - Implementação do Menu:
+
+Aula 71 - Configurando as Rotas com UI Router:
+
+	* Configuração das rotas do Angular.
+
+	* O Angular faz uma injeção de dependência de strings e um array de strings.
+
+	* UI Router é uma máquina de estado, você transita de um estado para outro.
+
+	* Definir uma rota padrão, caso desconheça a rota ele asume a rota padrão.	 
+
+	* Referenciar no menu a rota definida em cada link.
+
+Aula 72 - Versão inicial do Dashboard:
+
+	* Incluir tags html, classes e icones do bootstrap.	
+
+Aula 73 - Componente de Cabeçalho do Conteúdo:
+
+	* Criação de componentes para reaproveitar (reusar) código.
+
+	* Componentes que encapsula html e javascript (estrutura e comportamento).
+
+	
+
+
 
 
 
