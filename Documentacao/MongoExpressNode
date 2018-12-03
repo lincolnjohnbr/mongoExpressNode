@@ -460,8 +460,14 @@ Aula 67 - Adicionando o Angular ao Projeto:
 
 	* Na execução da aplicação apresentou um erro que foi enviado ao Professor.
 
+|--------------------------------------------------------------------------->[30/11/2018]
 
+Aula 67 - Adicionando o Angular ao Projeto:
 
+	* Como ainda estava dando erro resolvi apagar o projeto e começar a partir da Aula 60, não fiz a alteração da dependência 
+	"angular-ui-router" para "@uirouter/angularjs".
+
+	* Depois de adicionar as dependências e os arquivos do gulp e a sequência de tarefas tudo funcionou.
 
 
 
