@@ -500,7 +500,129 @@ Aula 73 - Componente de Cabeçalho do Conteúdo:
 
 	* Componentes que encapsula html e javascript (estrutura e comportamento).
 
-	
+|--------------------------------------------------------------------------->[11/12/2018]	
+
+Aula 74 - Factory para Ajudar no Layout (Bootstrap GridSystem):
+
+	* Aplicação exemplo usa o template Adminlte.
+
+	* Criar um método que vai receber um conjunto de numeros e transforma em classes do bootstrap. Referente a grid que
+	o aplicativo vai ocupar de acordo com o dispositivo que vai ser executado.
+
+
+Aula 75 - Componente ValueBox:
+
+	* Estava dando um erro no ValueBox que não aceitava o valor da grid, nas dúvidas tinha a solução:
+
+			this.$onInit = function () {
+		      this.gridClasses = gridSystem.toCssClasses(this.grid)
+		      }   
+
+Aula 76 - Inicializando o Backend com PM2:
+
+	* Inicializar o backend para consumir os valores na aplicação:
+
+		- O PM2 gerenciador de pacotes para node na produção, monitorando o seu servidor.
+
+		- Site http://pm2.keymetrics.io/
+
+		- Instalar pm2 globalmente $>npm install pm2 -g .
+
+		- Inicializar o mongodb $>mongod .
+
+		- Na pasta backend executar o comando $>npm run production .
+
+		- Para retirar o servidor da memória $>pm2 delete backend .
+
+		- Verificar se o servidor está rodando http://localhost:3003/api/billingSummary
+
+
+Aula 77 - Dashboard Controller:		
+
+	* Uma expressão do Angular você pode aplicar um modificador {{ valor | number:2 (modificador)}}
+
+	* Está dando um erro que depois que colocar o controller, o frontend não reconhece ValueBox.
+
+
+Aula 78 - Atualizando o DashboardController para o Angular 1.6:	
+
+	* Mostra a mudança do DashboardController.
+
+
+Aula 79 - Habilitando o CORS na Aplicação Backend:
+
+	* Foi necessário alterar o dashboard.html:
+
+		<section class="content" ng-controller="DashboardCtrl as dashboard">
+		  <div class="row">
+		    <value-box grid="4" color-class="bg-green" icon-class="fa fa-bank"
+		      value="R$ {{ dashboard.credit | number: 2  }}" text="Total de Créditos"></value-box>
+		    <value-box grid="4" color-class="bg-red" icon-class="fa fa-credit-card"
+		      value="R$ {{ dashboard.debt | number: 2  }}" text="Total de Débitos"></value-box>
+		    <value-box grid="4" color-class="bg-blue" icon-class="fa fa-money"
+		      value="R$ {{ dashboard.total | number: 2  }}" text="Valor Consolidado"></value-box>
+		  </div>
+		</section>
+
+	* Para resolver problema do CROS:
+
+		- Referência 1 : https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS
+
+		- Referência 2 : https://medium.com/@alexandremjacques/entendendo-o-cors-parte-8331d0a777e1
+
+		- Compartilhamento de recursos de origens cruzadas (CORS) é um mecanismo que usa cabeçalhos HTTP adicionais para garantir 
+		permissão de acesso a recursos de um servidor diferente do da origem da página (domínio) correntemente em uso. Um usuário
+		realiza um requisição HTTP de origem cruzada quando executa uma requisição de um domínio, protocolo ou porta diferente do qual 
+		originou o documento corrente. 
+
+		- Um exemplo de requisição de origem cruzada: Uma pagina HTML acessada através de http://domain-a.com faz
+		requisição de uma imagem <img> src para http://domain-b.com/image.jpg. Muita páginas na web, hoje em dia, utilizam recursos como CSS
+		stylesheets, imagens e scripts de um domínio diferente do que originou a página corrente, como redes de entrega de conteúdo (CDN).
+
+		- Por razões de segurança, os navegadores restringem solicitações HTTP de origem cruzada iniciadas a partir de scripts. Por exemplo,
+		XMLHttpRequest e Fetch seguem a política de mesma origem. Assim, um aplicativo da web usando XMLHttpRequest ou Fetch só poderá fazer
+		solicitações HTTP para seu próprio domínio. Para melhorar os aplicativos da Web, os desenvolvedores solicitaram que os fornecedores 
+		de navegador permitissem solicitações entre domínios.
+
+|--------------------------------------------------------------------------->[12/12/2018]	
+		
+Aula 80 - Aplicando dois Padrões do Angular:
+
+	* Guia das boas práticas do Angular(Angular Style Guide).
+
+	* Um dos padrões sugeridos no guia é sempre que possível retirar uma função do escopo global para um escopo local.
+
+
+Aula 81 - Estrutura de Abas do Cadastro:
+
+	* Criar as abas de cadastro do App.
+
+
+Aula 82 - Estrutura inicial do Formulário:	
+
+	* As estruturas de Html vem do template AdminLTE (themes).
+
+
+Aula 83 - Componente Campo de Formulário (Field):
+
+	* Transforma o elemento "Label e Input" em um componente.
+
+	* Uma boa pratica criar função auto-invocada.
+
+	* Utilizar o padrão do IIFE (funções imediatamente invocadas) é assim:
+
+		- (function() {
+	    	// Componente aqui!
+			})()
+
+Aula 84 - Versão inicial do Controller de Ciclo de Pagamentos:
+
+	* O componente dentro do angular tem um escopo isolado. O Controller tem um escopo e o componente outro.
+
+
+
+
+
 
 
 
