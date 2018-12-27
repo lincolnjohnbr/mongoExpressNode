@@ -620,6 +620,26 @@ Aula 84 - Versão inicial do Controller de Ciclo de Pagamentos:
 	* O componente dentro do angular tem um escopo isolado. O Controller tem um escopo e o componente outro.
 
 
+|--------------------------------------------------------------------------->[27/12/2018]	
+
+Aula 85 - Atualizando o BillingCycleController para Angular 1.6:
+
+	* Alterar o método .success para .then, para capturar os dados response.data e o .error para .catch com as informações
+	em response.data.errors .
+
+Aula 86 - Factory de Exibição de Mensagens:
+
+	* Função auto invocada:
+
+		- (function(){})()
+
+Aula 87 - Lista de Ciclo de Pagamentos (1/2):
+
+	* Criou uma função refresh(), que vai atualizar a lista.
+
+Aula 88 - Lista de Ciclo de Pagamentos (2/2):
+
+	* A tabela tem uma classe css "table".
 
 
 
