@@ -13,6 +13,7 @@ Aula 6 - Repositório no github:
 
 	- https://github.com/CursosCod3r/mean-primeira-app
 
+
 Aula 7 - Instalação do MongoDB (banco de dados NoSQL):
 
 	- $>sudo apt update.
@@ -640,6 +641,127 @@ Aula 87 - Lista de Ciclo de Pagamentos (1/2):
 Aula 88 - Lista de Ciclo de Pagamentos (2/2):
 
 	* A tabela tem uma classe css "table".
+
+
+|--------------------------------------------------------------------------->[21/02/2019]
+
+Aula 89 - Factory para Controlar a Exibição das Abas:
+
+	* Criar componente que controle a exibição das abas.
+
+	* Para executar aplicação:
+
+		- na pasta "backend" executar "npm run dev".
+
+		- na pasta "frontend" executar "npm run dev".
+
+
+|--------------------------------------------------------------------------->[29/05/2019]
+
+Aula 89 - Factory para Controlar a Exibição das Abas: (continuação)
+
+	* O exemplo está utilizando ECMAScript 5.
+
+
+Aula 90 - Exibição das Abas de Alterar e Excluir:
+
+	* Quando selecionar o icone "Alterar", vai ser escondida as abas de "Incluir" e "Excluir". 
+
+	* Exibir os conteúdos das abas, através da diretiva do angular "ng-class = "{active: bcCtrl.tabUpdate}"".
+
+
+Aula 91 - Exclusão do ciclo de pagamentos:
+
+	* No componente "field.js", crio um bindings unidirecional '<' onde fica somente no componente, não espalha para os parentes.
+
+
+Aula 92 - Alteração do Ciclo de Pagamentos:
+
+	* Utiliza o mesmo padrão usado na criação e exclusão.
+
+
+Aula 93 - Lista de Créditos:
+
+	* Criar o arquivo de lista de créditos.
+
+	* Aplicação exemplo usa o template Adminlte.
+
+
+|--------------------------------------------------------------------------->[31/05/2019]
+
+
+Aula 94 - Lista de Débitos:
+
+	* Criar a lista de débitos seguindo os mesmos passos da lista de créditos.
+
+
+Aula 95 - Créditos e Débitos: Adicionar, Clonar e Excluir:
+
+	* Usar o método splice() do javaScript. Onde vamos incluir um elemento dentro do array.
+
+
+Aula 96 - Sumário dos Créditos e Débitos 1/2:
+
+	* Utilizar o componete "<value-box>" para incluir um resumo de créditos e débitos.
+
+	
+
+|--------------------------------------------------------------------------->[13/06/2019]
+
+Aula 97 - Sumário dos Créditos e Débitos 2/2:
+
+	* Implantar no Resumo e quando for editar ou excluir.
+
+	* Sumário é a soma dos crédito subtraído da soma dos débitos.
+
+
+
+Aula 98 - Desabilitar Ações durante a Exclusão:	
+
+	* Foi detectado um erro que mesmo aplicando uma classe css os botões continuam habilitados.
+
+	* Nos botões de ação trocar ng-class="{disabled: bcCtrl.tabDelete}" pelo ng-disabled ="bcCtrl.tabDelete".
+
+
+Aula 99 - Implementando a Paginação:
+
+	* "http://localhost:3003/api/billingCycles/count" retorna quantos registros eu tenho.
+
+	* Navegar nos parâmetros da url.
+
+	* Na documentação do Node Rest Full, são descritos os filtros (limit e skip) que devo usar para limitar minha busca, por exemplo
+	por 5 registros e outros.
+
+	* Fazer uma injeção de dependência '$location'
+
+
+Aula 100 - Componente de Paginação:
+
+	* Construir o componente que vai permitir navegar na paginação do meu front-end.
+
+
+Aula 101 - One-Time Binding e AngularJs Batarang:
+
+	* Batarang é uma extensão para o google chrome que monitora aplicação NodeJs Express, verificando a performace.
+
+	* To way databinding é uma maneira do angular monitorar os valores, ganhando em controle mais perdendo em performace.
+	Em dados estáticos esse controle é denecessário uma maneira de desativalo é usando one-time binding, onde o angular
+	faz o binding apenas uma vez.
+
+
+Aula 102 - Atualizando o Projeto para Angular 1.6:
+
+	* Eu já tinha feito atualização.
+
+	
+
+
+
+
+
+
+
+
 
 
 
