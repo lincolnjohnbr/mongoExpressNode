@@ -753,14 +753,156 @@ Aula 102 - Atualizando o Projeto para Angular 1.6:
 
 	* Eu já tinha feito atualização.
 
+
+|--------------------------------------------------------------------------->[17/06/2019]
+
+Aula 103 - Bug Build do Projeto:
+
+	* Na minha versão não aparece este erro.
+
+Aula 104 - Apostila do curso:
+
+
+Aula 105 - Visão geral da apostila:
+
+
+Aula 106 - Configuração do Ambiente:
+
+	- git clone ......
+
+	- $backend>npm i (instalar as dependências)
+
+	- $angular1>npm i
+
+	- $>sudo mongod (executar o mongodb)
+
+	- $backend>npm run dev (executar backend)
+
+	- $angular1>npm run dev (executar frontend)
+
 	
+Aula 107 - Branch Projeto com Autenticação:
+
+	- Somente para efeito didático, foi criado um branch separado para implementar Autenticação do sistema.
+
+
+Aula 108 - Instalar Dependências:
+
+	- Instalar as dependências $>npm i --save bcrypt@3.0.6 jsonwebtoken@7.3.0 
+
+
+Aula 109 - Criar arquivo .env:
+
+	- Criar o arquivo na pasta $>backend .
+
+	- Colocar variáveis de ambiente, que vai ajudar na geração do token, gerado apartir da chave authSecret.
+
+	- Informar no .gitignore que você não quer comitar o arquivo .env .
+
+
+Aula 110 - Criar o arquivo user.js:
+
+	- O arquivo user.js faz o mapeamento objeto -> documento.	
+
+
+|--------------------------------------------------------------------------->[08/07/2019]
+
+Aula 111 - Criar arquivo authService.js 1/2:
+
+	- O arquivo que vai conter a parte de autenticação do sistema.
+
+	- Utilizar apostila para auxiliar no código.
+
+	- Carregar dependências como jwt(token), bcrypt (para criptografar a senha), expressões regulares para validar entrada de dados
+	do email e senha .
+
+	- Criar um método genérico para tratar erro do banco MongoDb, aumentando a segurança nas mensagens de erro para não revelar
+	detalhes da sua estrutura de banco de dados.
+
+	- Utilizar o https para melhorar a segurança na comunicação da aplicação.
+
+	- Se o usuário e senha estiverem corretos eu gero o token comparando ao authSecret que está no arquivo env., expirando a senha
+	em um dia. Enviando autorização com nome, email e token para acesso ao sistema.
+
+
+Aula 112 - Criar arquivo authService.js 2/2:
+
+	- Criando uma função validateToken() (um Middlewares com requisição, resposta e next), que permite ao usuário mesmo
+	fechando o browse continuar logado dentro do tempo de validade deste token, a informação do token vai ser armazenada no
+	local storage do browse.
+
+	- Se você informar a mesma senha e manda gerar o hash depois de determinado tempo vai ser gerado um hash diferente. 
+
+
+Aula 113 - Criar middleware auth.js:
+
+	- Esse [middleware] será o responsável por validar o token JWT para as rotas protegidas e garantir que a API esteja protegida.
+
+
+Aula 114 - Alterar arquivo route.js:
+
+	- Acrescentar autorization nas rotas, definir as rotas abertas e as protegidas por token jwt.	 
+
+
+|--------------------------------------------------------------------------->[30/07/2019]
+
+Aula 115 - Widget do Usuário:
+
+	- Adequar o Front-end para trabalhar com autorization.
+
+	- Criar um usuário com um objeto mock (simulado).
+
+
+Aula 116 - Estrutura Básica do Login/Cadastro:
+
+	- Criar um componente de input do login seguindo o template do Adminlte.
+
+
+Aula 117 - AuthFactory: O Coração do Login/Cadastro (parte 1):
+
+	- Armazenar variáveis no local storage do browse.
+
+
+Aula 118 - AuthFactory: O Coração do Login/Cadastro (parte 2):
+
+	- No console do browse:
+
+		* localStorage.getItem('_primeira_app_user'), vai ser exibido informações armazenadas no localStorage.
+
+	- login: aluno@bol.com password:Aluno12##
+
+
+Aula 119 - Protegendo as Rotas:
+
+	- No ciclo de vida do Angular o primeiro método que é executado é o config e depois run.
+
+	
+|--------------------------------------------------------------------------->[31/07/2019]
+
+Aula 120 - Validar Token:
+
+	- O token ele expira, tem uma validade.
+
+	- Quando o token perder a validade, preciso fazer um tratamento no acesso ao sistema.
+
+
+Aula 121 - Tratar Resosta com Erro:
+
+	- Criar uma factory que seja responsável em tratar as resposta de erro.
+
+
+Aula 122 - Próximos passos:	
+
+	- 
+
+Aula 123 - Deploy do Backend: (assistir o vídeo - falta executar)
+
+
+Aula 124 - Deploy do Frontend: (assistir o vídeo - falta executar)
 
 
 
-
-
-
-
+|---------------------------------> FIM <-------------------------------------|
 
 
 
