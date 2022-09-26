@@ -21,7 +21,7 @@
     "node-gyp": "^5.0.0",
     "node-pre-gyp": "^0.13.0",
     "node-restful": "^0.2.6",
-    "pm2": "^3.5.1"
+    "pm2": "^5.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
